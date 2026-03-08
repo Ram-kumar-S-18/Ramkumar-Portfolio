@@ -11,7 +11,7 @@ const translations = {
 
         edu_title: "EDUCATION_",
         edu_mgr: "Dr. M.G.R Educational and Research Institute",
-        edu_mgr_date: "OCT 2022 - MAY 2025",
+        edu_mgr_date: "OCT 2022 - MAY 2026",
         edu_mgr_degree: "Bachelor of Engineering, Information Technology",
         edu_mgr_cgpa: "CGPA : 8.23",
         edu_db: "Don Bosco Matriculation Higher Secondary School",
@@ -379,7 +379,7 @@ const translations = {
 
         edu_title: "EDUCACIÓN_",
         edu_mgr: "Instituto de Educación e Investigación Dr. M.G.R",
-        edu_mgr_date: "OCT 2022 - MAY 2025",
+        edu_mgr_date: "OCT 2022 - MAY 2026",
         edu_mgr_degree: "Licenciatura en Ingeniería, Tecnología de la Información",
         edu_mgr_cgpa: "CGPA : 8.23",
         edu_db: "Don Bosco Matriculation Higher Secondary School",
