@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramkumar - Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Dark Mode Flash Overlay -->
+    <div id="flash-overlay" class="flash-overlay"></div>
+
+    <!-- Background Starfield (Dark Mode Only) -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading">
+        <div class="text-pixel" id="loader-name" style="font-size: clamp(24px, 5vw, 48px); margin-bottom: 16px;">
+            RAMKUMAR S</div>
+        <div class="text-pixel" id="loader-role"
+            style="color: var(--color-accent); font-size: clamp(14px, 3vw, 24px); text-align: center;">
+            <span id="loader-role-1">DEVELOPER</span>
+        </div>
+    </div>
+
+    <!-- Main App Container -->
+    <div class="screen-frame">
+        <!-- Header / Navigation -->
+        <header class="header">
+            <div class="logo-container">
+                <a href="#" class="logo-link">
+                    <span class="logo-text">RAMKUMAR</span>
+                    <!-- Canvas for Logo Symbols: Triangle, Circle, Square, Play -->
+                    <canvas id="logo-icons" width="80" height="20" aria-hidden="true"></canvas>
+                    <span class="logo-text">DEV</span>
+                </a>
+
+                <div class="utility-bar">
+                    <button class="util-icon" id="theme-toggle" aria-label="Toggle Theme">
+                        <canvas id="icon-theme" width="16" height="16"></canvas>
+                    </button>
+                    <button class="util-icon" id="sound-toggle" aria-label="Toggle Sound">
+                        <canvas id="icon-sound" width="16" height="16"></canvas>
+                    </button>
+                    <div class="lang-dropdown-wrapper">
+                        <button class="util-icon" id="lang-toggle" aria-label="Language">
+                            <span class="lang-btn" id="current-lang">EN</span>
+                        </button>
+                        <div class="lang-menu" id="lang-menu">
+                            <button class="lang-option" data-lang="en">EN</button>
+                            <button class="lang-option" data-lang="fr">FR</button>
+                            <button class="lang-option" data-lang="es">ES</button>
+                            <button class="lang-option" data-lang="de">DE</button>
+                            <button class="lang-option" data-lang="hi">HI</button>
+                            <button class="lang-option" data-lang="ja">JA</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <nav class="nav-container">
+                <div class="nav-links">
+                    <a href="#summary" class="nav-link active" data-i18n="nav_summary">SUMMARY</a>
+                    <a href="#experience" class="nav-link" data-i18n="nav_experience">EXPERIENCE</a>
+                    <a href="#projects" class="nav-link" data-i18n="nav_projects">PROJECTS</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Right Side Badge -->
+        <div class="awwwards-badge">
+            RAMKUMAR S
+        </div>
+
+        <!-- Scrollable Content -->
+        <main class="content-area">
+
+            <!-- Hero Profile -->
+            <article class="hero-card" id="summary">
+                <div class="badge-private" data-i18n="profile_badge">PROFILE</div>
+                <div class="text-binary text-pixel">00000001</div>
+                <h1 class="hero-title" data-i18n="hero_title"
+                    style="font-size: clamp(30px, 4vw, 55px); line-height: 1.2; text-transform: uppercase;">
+                    DEVELOPER
+                </h1>
+                <h2 class="hero-sub-title" data-i18n="hero_sub_title"
+                    style="font-size: clamp(30px, 4vw, 55px); line-height: 1.2; text-transform: uppercase; color: var(--color-accent); font-weight: 900; margin-top: 2px;">
+                    AUTOMATION WITH AI
+                </h2>
+
+                <div class="hero-meta" style="margin-top: 32px;">
+                    <div class="date text-pixel" data-i18n="hero_summary_title"
+                        style="color: var(--color-accent); font-size: 12px;">SUMMARY_</div>
+                </div>
+                <p data-i18n="hero_summary_text"
+                    style="font-size: var(--text-base); margin-top: 16px; line-height: 1.8;">
+                    Motivated IT graduate with practical experience in Python, Java, JavaScript, SQL and
+                    web development. Built user-facing web applications and database-driven features through real
+                    projects.
+                    Quick learner with a practical, problem-solving approach and strong teamwork skills.
+                </p>
+            </article>
+
+            <!-- Education -->
+            <h2 class="text-pixel section-heading" data-i18n="edu_title">EDUCATION_</h2>
+            <div class="experience-item">
+                <div class="experience-title" data-i18n="edu_mgr">Dr. M.G.R Educational and Research Institute</div>
+                <div class="experience-meta" data-i18n="edu_mgr_date">OCT 2022 - MAY 2025</div>
+                <div class="text-binary text-pixel" data-i18n="edu_mgr_degree"
+                    style="font-size: 10px; color: var(--color-text);">Bachelor of Engineering, Information Technology
+                </div>
+                <ul class="resume-list" style="margin-bottom: 0;">
+                    <li data-i18n="edu_mgr_cgpa">CGPA : 8.23</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <div class="experience-title" data-i18n="edu_db">Don Bosco Matriculation Higher Secondary School</div>
+                <ul class="resume-list" style="margin-top: var(--sp-2); margin-bottom: 0;">
+                    <li data-i18n="edu_db_12">12th (HSC) - 80.5%</li>
+                    <li data-i18n="edu_db_10">10th (SSLC) - 82.2%</li>
+                </ul>
+            </div>
+
+            <!-- Skills -->
+            <h2 class="text-pixel section-heading" data-i18n="skills_title">SKILLS_</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-title" data-i18n="skills_tech">TECHNICAL SKILLS</div>
+                    <div class="tech-tags">
+                        <span class="tag icon-tag"><i class="devicon-python-plain colored"></i>PYTHON</span>
+                        <span class="tag icon-tag"><i class="devicon-java-plain colored"></i>JAVA</span>
+                        <span class="tag icon-tag"><i class="devicon-javascript-plain colored"></i>JAVASCRIPT</span>
+                        <span class="tag icon-tag"><i class="devicon-html5-plain colored"></i>HTML</span>
+                        <span class="tag icon-tag"><i class="devicon-css3-plain colored"></i>CSS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title" data-i18n="skills_frameworks">FRAMEWORKS &amp; TOOLS</div>
+                    <div class="tech-tags">
+                        <span class="tag icon-tag"><i class="devicon-react-original colored"></i>REACT.JS</span>
+                        <span class="tag icon-tag"><i class="devicon-nodejs-plain colored"></i>NODE.JS</span>
+                        <span class="tag icon-tag"><i class="devicon-mongodb-plain colored"></i>MONGODB</span>
+                        <span class="tag icon-tag"><i class="devicon-mysql-plain colored"></i>SQL</span>
+                        <span class="tag icon-tag"><i class="devicon-amazonwebservices-plain-wordmark colored"></i>AWS
+                            CLOUD</span>
+                        <span class="tag icon-tag"><i class="devicon-github-original"></i>GIT / GITHUB</span>
+                        <span class="tag icon-tag"><i class="devicon-linux-plain"></i>LINUX</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title" data-i18n="skills_others">OTHERS</div>
+                    <div class="tech-tags">
+                        <span class="tag">DSA</span>
+                        <span class="tag">DBMS</span>
+                        <span class="tag">PROMPT ENGINEERING</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title" data-i18n="skills_soft">SOFT SKILLS</div>
+                    <div class="tech-tags">
+                        <span class="tag" data-i18n="skills_soft_1">LEADERSHIP</span>
+                        <span class="tag" data-i18n="skills_soft_2">DECISION-MAKING</span>
+                        <span class="tag" data-i18n="skills_soft_3">COMMUNICATION</span>
+                        <span class="tag" data-i18n="skills_soft_4">LOGICAL THINKING</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <h2 class="text-pixel section-heading" id="experience" data-i18n="exp_title">EXPERIENCE_</h2>
+
+            <div class="experience-item">
+                <div class="experience-title" data-i18n="exp_1_title">Full Stack Web Development Intern</div>
+                <div class="experience-meta" data-i18n="exp_1_meta">CORIZO EDUTECH | SEP 2024 - OCT 2024</div>
+                <div class="tech-tags" style="margin-bottom: 12px;">
+                    <span class="tag">HTML/CSS</span>
+                    <span class="tag">JAVASCRIPT</span>
+                    <span class="tag">SQL</span>
+                </div>
+                <p class="resume-text" data-i18n="exp_1_desc" style="margin-bottom: 0;">Exposure to UI implementation,
+                    basic backend integration, and client-server interaction concepts.</p>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-title" data-i18n="exp_2_title">Cybersecurity Intern</div>
+                <div class="experience-meta" data-i18n="exp_2_meta">CORIZO EDUTECH | NOV 2024 - DEC 2024</div>
+                <p class="resume-text" data-i18n="exp_2_desc" style="margin-bottom: 0;">Exposure to phishing scenarios,
+                    email security concepts, and common cybersecurity use cases.</p>
+            </div>
+            <div class="experience-item">
+                <div class="experience-title" data-i18n="exp_3_title">Event Coordinator</div>
+                <div class="experience-meta" data-i18n="exp_3_meta">DEPARTMENT SYMPOSIUM (SPARKLE'25)</div>
+                <p class="resume-text" data-i18n="exp_3_desc" style="margin-bottom: 0;">Involvement in symposium
+                    planning, registration workflows, and management of the official event website.</p>
+            </div>
+            <div class="experience-item">
+                <div class="experience-title" data-i18n="exp_4_title">Social Worker / Volunteer</div>
+                <div class="experience-meta" data-i18n="exp_4_meta">YOUNG INDIANS CLUB</div>
+                <p class="resume-text" data-i18n="exp_4_desc" style="margin-bottom: 0;">Participated in organizing
+                    social initiatives for Persons with Disabilities (PWDs) through coordinated student activities.</p>
+            </div>
+            <div class="experience-item">
+                <div class="experience-title" data-i18n="exp_5_title">Volunteer</div>
+                <div class="experience-meta" data-i18n="exp_5_meta">CII 5TH EDITION SURFACE & COATING EXPO 2025</div>
+                <p class="resume-text" data-i18n="exp_5_desc" style="margin-bottom: 0;">Involvement in on-ground event
+                    operations and coordination activities during an industry exhibition.</p>
+            </div>
+
+            <!-- Project Grid -->
+            <h2 class="text-pixel section-heading" id="projects" data-i18n="proj_title">PROJECTS_</h2>
+            <section class="project-grid">
+
+                <article class="project-card">
+                    <div class="card-image-wrapper">
+                        <div class="card-image" style="background: linear-gradient(45deg, #111, #4F72FD);"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="text-binary text-pixel" style="font-size: 10px;">PROJ_01</div>
+                        <h2 class="card-title" data-i18n="proj_1_title" style="font-size: 24px;">PORTFOLIO & AI
+                            RECRUITER</h2>
+                        <div class="card-date" data-i18n="proj_1_meta">Ai-Based Assistant</div>
+                        <p data-i18n="proj_1_desc" style="font-size: 12px; margin-top: 8px; flex-grow: 1;">Built a
+                            portfolio incorporating an AI assistant responding to recruiter queries via prompts.</p>
+                        <div class="tech-tags" style="margin-top: 16px;">
+                            <span class="tag">AI</span><span class="tag">PROMPT ENG</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-image-wrapper">
+                        <div class="card-image" style="background: linear-gradient(45deg, #1ADE99, #111);"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="text-binary text-pixel" style="font-size: 10px;">PROJ_02</div>
+                        <h2 class="card-title" data-i18n="proj_2_title" style="font-size: 24px;">SPARKLE'25 SYMPOSIUM
+                        </h2>
+                        <div class="card-date" data-i18n="proj_2_meta">Solo Project</div>
+                        <p data-i18n="proj_2_desc" style="font-size: 12px; margin-top: 8px; flex-grow: 1;">Responsive
+                            symposium website with online registration and event information.</p>
+                        <div class="tech-tags" style="margin-top: 16px;">
+                            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-image-wrapper">
+                        <div class="card-image" style="background: linear-gradient(45deg, #F03FA6, #E1AA2B);"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="text-binary text-pixel" style="font-size: 10px;">PROJ_03</div>
+                        <h2 class="card-title" data-i18n="proj_3_title" style="font-size: 24px;">PHISHING EMAIL
+                            EXTENSION</h2>
+                        <div class="card-date" data-i18n="proj_3_meta">Chrome Extension</div>
+                        <p data-i18n="proj_3_desc" style="font-size: 12px; margin-top: 8px; flex-grow: 1;">Integrated
+                            Gmail API to flag phishing links using rule-based/pattern matching.</p>
+                        <div class="tech-tags" style="margin-top: 16px;">
+                            <span class="tag">GMAIL API</span><span class="tag">JS</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-image-wrapper">
+                        <div class="card-image" style="background: linear-gradient(45deg, #E1AA2B, #111);"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="text-binary text-pixel" style="font-size: 10px;">PROJ_04</div>
+                        <h2 class="card-title" data-i18n="proj_4_title" style="font-size: 24px;">FOODIEE WEB APP</h2>
+                        <div class="card-date" data-i18n="proj_4_meta">Full Stack</div>
+                        <p data-i18n="proj_4_desc" style="font-size: 12px; margin-top: 8px; flex-grow: 1;">Web
+                            application for searching food recipes and restaurants with backend connectivity.</p>
+                        <div class="tech-tags" style="margin-top: 16px;">
+                            <span class="tag">WEB APP</span><span class="tag">BACKEND</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-image-wrapper">
+                        <div class="card-image" style="background: linear-gradient(45deg, #111, #1ADE99);"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="text-binary text-pixel" style="font-size: 10px;">PROJ_05</div>
+                        <h2 class="card-title" data-i18n="proj_5_title" style="font-size: 24px;">STUDY PORTAL</h2>
+                        <div class="card-date" data-i18n="proj_5_meta">Resource Platform</div>
+                        <p data-i18n="proj_5_desc" style="font-size: 12px; margin-top: 8px; flex-grow: 1;">Centralized
+                            portal to organize and share programming notes to improve accessibility.</p>
+                        <div class="tech-tags" style="margin-top: 16px;">
+                            <span class="tag">PORTAL</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-image-wrapper">
+                        <div class="card-image" style="background: linear-gradient(45deg, #4F72FD, #F03FA6);"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="text-binary text-pixel" style="font-size: 10px;">PROJ_06</div>
+                        <h2 class="card-title" data-i18n="proj_6_title" style="font-size: 24px;">TO-DO APPLICATION</h2>
+                        <div class="card-date" data-i18n="proj_6_meta">Prompt-Driven Dev</div>
+                        <p data-i18n="proj_6_desc" style="font-size: 12px; margin-top: 8px; flex-grow: 1;">Built
+                            functional to-do app by iteratively refining prompts to generate UI logic.</p>
+                        <div class="tech-tags" style="margin-top: 16px;">
+                            <span class="tag">AI ASSISTED</span>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+            <!-- Achievements & International Exposure -->
+            <h2 class="text-pixel section-heading" data-i18n="achievements_title">ACHIEVEMENTS & EXPOSURE_</h2>
+            <ul class="card-list">
+                <li data-i18n="achiev_1"><strong>Campus Mantri for Geeks for Geeks</strong> - Official campus
+                    representative for a 6-month tenure supporting student engagement.</li>
+                <li data-i18n="achiev_2"><strong>Global Immersion Program</strong> - 5-day academic visit to UCSI
+                    University, Malaysia gaining exposure to IT, AI, Cyber Security, and cross-cultural environments.
+                </li>
+                <li data-i18n="achiev_3"><strong>Employability Skill Training</strong> - Mahindra Pride Classroom
+                    focused on professional communication readiness.</li>
+                <li data-i18n="achiev_4"><strong>2nd Prize</strong> - "Canva with AI" Workshop at SRMIST Vadapalani
+                    Campus.</li>
+                <li data-i18n="achiev_5"><strong>Internal SIH</strong> - Selected for Smart India Hackathon internal
+                    round demonstrating problem-solving.</li>
+                <li data-i18n="achiev_6"><strong>GIAN Course</strong> - "Chain of Things: Blockchain & IoT" by IIT Ropar
+                    globally exposing emerging tech.</li>
+            </ul>
+
+            <!-- Certifications & Working Knowledge -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--sp-5);">
+                <div>
+                    <h2 class="text-pixel section-heading" data-i18n="cert_title" style="margin-top: 0;">CERTIFICATIONS_
+                    </h2>
+                    <ul class="card-list">
+                        <li data-i18n="cert_1">AWS Cloud Practitioner Essentials</li>
+                        <li data-i18n="cert_2">AWS S3 Basics (Coursera)</li>
+                        <li data-i18n="cert_3">Microsoft Azure - Basics (Infosys Springboard)</li>
+                        <li data-i18n="cert_4">Build a Computer Vision App with Azure AI (Microsoft)</li>
+                        <li data-i18n="cert_5">Technology Job Simulation (Deloitte / Forage)</li>
+                        <li data-i18n="cert_6">Gen AI Powered Data Analytics Simulation (Tata / Forage)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-pixel section-heading" data-i18n="work_title" style="margin-top: 0;">WORKING
+                        KNOWLEDGE_</h2>
+                    <ul class="card-list">
+                        <li data-i18n="work_1">Full Stack Web Application Development</li>
+                        <li data-i18n="work_2">API Integration and Data Handling (Basic)</li>
+                        <li data-i18n="work_3">Cloud Computing Concepts (AWS & Azure)</li>
+                        <li data-i18n="work_4">Database Design and Querying</li>
+                        <li data-i18n="work_5">Linux-Based Development Environments</li>
+                        <li data-i18n="work_6">Prompt-Driven Development and AI-Assisted Coding</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <footer
+                style="margin-top: 64px; border-top: 1px solid var(--color-border); padding-top: 24px; display: flex; justify-content: space-between; align-items: center;">
+                <p class="text-pixel" data-i18n="footer_copy" style="font-size: 8px; color: var(--color-text-muted);">
+                    COPYRIGHT &copy; RAMKUMAR S. ALL RIGHTS RESERVED.</p>
+            </footer>
+
+        </main>
+
+        <!-- Bottom Right Utility Dock -->
+        <div class="utility-dock">
+            <a href="resume.pdf" download class="dock-btn" style="text-decoration: none; color: inherit;"
+                aria-label="Download Resume" title="Download Resume">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    style="display:block;">
+                    <!-- File body -->
+                    <rect x="2" y="1" width="10" height="13" rx="1" stroke="currentColor" stroke-width="1.5"
+                        fill="none" />
+                    <!-- Folded corner -->
+                    <polyline points="9,1 12,1 12,4 9,4 9,1" fill="currentColor" stroke="currentColor"
+                        stroke-width="1" />
+                    <!-- Down arrow stem -->
+                    <line x1="13" y1="10" x2="13" y2="16" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" />
+                    <!-- Down arrow head -->
+                    <polyline points="10.5,14 13,17 15.5,14" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                </svg>
+            </a>
+            <a href="mailto:ramkumars.1821@gmail.com" class="dock-btn" style="text-decoration: none; color: inherit;"
+                aria-label="Email" title="Email">
+                <i class="devicon-google-plain"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ramkumars18/" target="_blank" class="dock-btn"
+                style="text-decoration: none; color: inherit;" aria-label="LinkedIn" title="LinkedIn">
+                <i class="devicon-linkedin-plain colored"></i>
+            </a>
+            <a href="https://wa.me/919551733526" target="_blank" class="dock-btn"
+                style="text-decoration: none; color: inherit;" aria-label="WhatsApp" title="WhatsApp">
+                <i class="devicon-whatsapp-plain colored"></i>
+            </a>
+            <button class="dock-btn" aria-label="Back to Top" onclick="window.scrollTo({top:0, behavior:'smooth'})"
+                title="Back to Top">
+                <span class="dock-btn-icon text-pixel" style="font-size: 14px; font-weight: bold;">&#8593;</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
